@@ -42,7 +42,7 @@ public class WeekDayCell : Cell<Set<WeekDay>>, CellType {
     @IBOutlet var thursdayButton: UIButton!
     @IBOutlet var fridayButton: UIButton!
     @IBOutlet var saturdayButton: UIButton!
-        
+    
     public override func setup() {
         height = { 60 }
         row.title = nil
@@ -138,9 +138,9 @@ public final class WeekDayRow: Row<Set<WeekDay>, WeekDayCell>, RowType {
 //MARK: FloatLabelCell
 
 public class _FloatLabelCell<T where T: Equatable, T: InputTypeInitiable>: Cell<T>, UITextFieldDelegate, TextFieldCell {
-        
+    
     public var textField : UITextField { return floatLabelTextField }
-
+    
     required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -406,8 +406,8 @@ public class AccountFloatLabelCell : _FloatLabelCell<String>, CellType {
 //MARK: FloatLabelRow
 
 public class FloatFieldRow<T: Any, Cell: CellType where Cell: BaseCell, Cell: TypedCellType, Cell: TextFieldCell, Cell.Value == T>: FormatteableRow<T, Cell> {
-
-
+    
+    
     public required init(tag: String?) {
         super.init(tag: tag)
     }
